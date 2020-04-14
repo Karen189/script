@@ -29,6 +29,11 @@ for i in "${messages[@]}"
 	((tue++))
    elif [  $i  == Wednesday ]
    then
+
+
+
+
+and noww
 	((wed++))
    elif [ $i == Thursday ]
    then
