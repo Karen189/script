@@ -1,0 +1,38 @@
+#! bin/sh
+# declaring messages array
+declare -A messages
+#declaring 2 dates and only get a day
+declare d1=$(date "+%A")
+declare d2=$(date -d "2020-04-04" "+%A")
+
+#populate the days in ur array
+messages=([0]=$d2 [1]=$d1)
+
+#declare days variables
+declare mon=0
+declare tue=0
+declare wed=0
+declare thu=0
+declare fri=0
+declare sat=0
+declare sun=0
+
+#iterate through your array
+for i in "${messages[@]}"
+ do
+	#compare one day with Monday
+   if [ $i  == Monday ]
+   then
+	((mon++))
+   elif [ $i  == Tuesday ]
+   then
+	((tue++))
+   elif [  $i  == Wednesday ]
+   then
+	((wed++))
+   elif [ $i == Thursday ]
+   then
+	((thu++))
+   elif [ $i == Friday ]
+   then
+	((fri++))
